@@ -19,6 +19,9 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 
 [Citation]: https://snap.stanford.edu/data/cit-HepTh.html
 
+Performance
+------------
+
 Performance comparison on four random networks. Note: numbers in parentheses are running time (seconds).
 
 | Network size    | Community size  | K-Means | Modularity <br/> Maximization| DCD   |
@@ -29,15 +32,16 @@ Performance comparison on four random networks. Note: numbers in parentheses are
 | 20,000    | 100 | 0.709<br/>(807.56) | 0.702<br/>(1666.59) |0.814<br/>(444.12)|
 
 
-Training time of high-dimensional data visualization on [MNIST] dataset.
+Performance comparison on two real-world networks. Note: numbers in parentheses are running time (seconds).
 
-| Model        | Existing Implementation       | GraphVite | Speedup |
-|--------------|-------------------------------|-----------|---------|
-| [LargeVis]   | [15.3 mins (CPU parallel)][5] | 13.9 s    | 66.8x   |
+| Network   | Community size  | K-Means | Modularity <br/> Maximization| DCD  | DCD+|
+|-----------------|-----------------|---------|------------------------|------|-----|
+|       | 50  | 0.451<br/>(82.72) |     |0.503<br/>(38.46)| 0.532<br/>(39.01) |
+|       | 100 | 0.427<br/>(103.91) |     |0.519<br/>(37.86)| 0.520<br/>(38.95) |
+| Facebook <br/> weighted and undirected <br/>network with node attributes | 150 | 0.4406<br/>(118.58) |     |0.532<br/>(37.87)| 0.525<br/>(38.92) |
+|       | 200 | 0.383<br/>(144.77) |     |0.521<br/>(37.87)| 0.530<br/>(39.50)|
+|       | 33  | 0.464<br/>(75.47) |  0.516<br/>(64.70) |0.521<br/>(38.05)| 0.538<br/>(39.20) |
 
-[MNIST]: http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf
-[LargeVis]: https://arxiv.org/pdf/1602.00370.pdf
-[5]: https://github.com/lferry007/LargeVis
 
 Requirements
 ------------
