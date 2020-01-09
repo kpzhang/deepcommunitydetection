@@ -8,17 +8,37 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 
 | Function      | Description       | Input | Output |
 |------------|-------------------------------|-----------|---------|
-| [DeepWalk] | [1.64 hrs (CPU parallel)][1]  | 1.19 mins | 82.9x   |
-| [LINE]     | [1.39 hrs (CPU parallel)][2]  | 1.17 mins | 71.4x   |
-| [node2vec] | [24.4 hrs (CPU parallel)][3]  | 4.39 mins | 334x    |
+| KMeans     | Clustering baseline method (1) | Network node file |                         |
+|            |                                | Network edge file | <node id, community id> |
+|            |                                | K                 |                         |
+|------------|-------------------------------|-----------|---------|
+| MM     | Clustering baseline method (2) | Network node file |                         |
+|            |                                | Network edge file | <node id, community id> |
+|------------|-------------------------------|-----------|---------|
+| GCN     | DCD | Network node file |                         |
+|            |                                | Network edge file | <node id, community id> |
+|            |                                | K                 |                         |
+|------------|-------------------------------|-----------|---------|
+| GCN+     | Variant of GCN with node attributes | Network node file with attributes |                         |
+|            |                                | Network edge file | <node id, community id> |
+|            |                                | K                 |                         |
+|------------|-------------------------------|-----------|---------|
+| Evaluation     | Evaluate the performance | Network node file |                         |
+|            |                                | Network edge file | performance value|
+|            |                                | Community assignment                 |                         |
+|------------|-------------------------------|-----------|---------|
+| Random network     | Generate random network datasets | Network size |                         |
+|            |                                | Community size | <node id, community id> |
+|            |                                | Probability of edges within communities                | Network node file |
+|            |                                | Probability of edges between communities                |Network edge file |
+|            |                                | Directed network flag               |                     |
+|------------|-------------------------------|-----------|---------|
+| Facebook network  | Import Facebook brand-brand network  | None| Facebook dataset |
+|------------|-------------------------------|-----------|---------|
+| Citation network  | Import citation network  | None| [Citation] dataset |
+|------------|-------------------------------|-----------|---------|
 
-[Youtube]: http://conferences.sigcomm.org/imc/2007/papers/imc170.pdf
-[DeepWalk]: https://arxiv.org/pdf/1403.6652.pdf
-[LINE]: https://arxiv.org/pdf/1503.03578.pdf
-[node2vec]: https://www.kdd.org/kdd2016/papers/files/rfp0218-groverA.pdf
-[1]: https://github.com/phanein/deepwalk
-[2]: https://github.com/tangjianpku/LINE
-[3]: https://github.com/aditya-grover/node2vec
+[Citation]: https://snap.stanford.edu/data/cit-HepTh.html
 
 Training / evaluation time of knowledge graph embedding on [FB15k] dataset.
 
