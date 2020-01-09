@@ -61,8 +61,6 @@ class DCD():
 
 		os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-		np.random.seed(2020)
-
 		self.nhidden1 = nhidden1
 		self.nhidden2 = nhidden2
 		self.nhidden3 = nhidden3
