@@ -21,16 +21,14 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 
 Performance comparison on four random networks. Note: numbers in parentheses are running time (seconds).
 
-| Network size           | Community size          | Baselines          | Our method       |
-|-----------------|-----------------------------------|--------------------|---------------|
-| 100       | [1.31 hrs / 1.75 mins (1 GPU)][3] | 13.5 mins / 54.3 s | 5.82x / 1.93x |
-| 1,000       | [3.69 hrs / 4.19 mins (1 GPU)][4] | 28.1 mins / 55.8 s | 7.88x / 4.50x |
+| Network size    | Community size  | Baselines                        | Our method    |
+|-----------------|-----------------|----------------------------------|---------------|
+|                 |                 |K-Means | modularity maximization | GCN           |      
+| 100       | 10 | 13.5 mins / 54.3 s | 5.82x / 1.93x |
+| 1,000       | 100 | 28.1 mins / 55.8 s | 7.88x / 4.50x |
+| 10,000       | 100 | 28.1 mins / 55.8 s | 7.88x / 4.50x |
+| 20,000       | 100 | 28.1 mins / 55.8 s | 7.88x / 4.50x |
 
-[FB15k]: http://papers.nips.cc/paper/5071-translating-embeddings-for-modeling-multi-relational-data.pdf
-[TransE]: http://papers.nips.cc/paper/5071-translating-embeddings-for-modeling-multi-relational-data.pdf
-[RotatE]: https://arxiv.org/pdf/1902.10197.pdf
-[3]: https://github.com/DeepGraphLearning/KnowledgeGraphEmbedding
-[4]: https://github.com/DeepGraphLearning/KnowledgeGraphEmbedding
 
 Training time of high-dimensional data visualization on [MNIST] dataset.
 
