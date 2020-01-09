@@ -22,7 +22,7 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 
 [Citation]: https://snap.stanford.edu/data/cit-HepTh.html
 
-Performance
+<!--- Performance
 ------------
 
 Performance comparison on four random networks. Note: numbers in parentheses are running time (seconds).
@@ -50,7 +50,7 @@ Performance comparison on two real-world networks. Note: numbers in parentheses 
 | Facebook <br/> weighted and undirected <br/>network with node attributes | 500 | 0.561<br/>(1096.14) |   /  |0.927<br/>(216.59)| No node attributes |
 |       | 1,000 | 0.611<br/>(1843.03) |  /   |0.940<br/>(217.32)| |
 |       | 2,078 (mm)  | 0.660<br/>(3219.14) |  0.790<br/>(715.26) |0.939<br/>(217.56)| |
-
+-->
 
 Requirements
 ------------
