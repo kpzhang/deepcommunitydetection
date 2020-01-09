@@ -93,7 +93,9 @@ Here is a quick-start example.
 
 ```bash
 KMeans: python kmeans.py --nodes <node file> --edges <edge file> --k <number of communities> --eval <Y/N>
+
 Modularity Maximization: python modularity_maximization.py --nodes <node file> --edges <edge file> --eval <Y/N>
+
 DCD: python dcd.py --nodes <node file> --edges <edge file> --nodeattr <Y/N> --hidden1 <number of neurons in the first hidden layer> --hidden2 <number of neurons in the second hidden layer> --hidden3 <number of neurons in the third hidden layer> --nlabels <number of communities> --eval <Y/N>
 ```
 
