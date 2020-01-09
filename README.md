@@ -8,7 +8,7 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 
 | Function      | Description       | Input | Output |
 |------------|-------------------------------|-----------|---------|
-| KMeans     | Clustering baseline method (1) | Network node file . Network edge file . K | <node id, community id> |
+| KMeans     | Clustering baseline method (1) | Network node file  Network edge file  K | <node id, community id> |
 | MM     | Clustering baseline method (2) | Network node file |                         |
 |            |                                | Network edge file | <node id, community id> |
 | GCN     | DCD | Network node file |                         |
