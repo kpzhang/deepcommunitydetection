@@ -64,13 +64,13 @@ Installation
 ### From Conda ###
 
 ```bash
-conda install -c dcd
+conda install -c pydcd
 ```
 
 ### From PIP ###
 
 ```bash
-pip3 install dcd
+pip3 install pydcd
 ```
 
 ### From Source ###
@@ -92,11 +92,21 @@ Quick Start
 Here is a quick-start example.
 
 ```bash
-(1) KMeans: python kmeans.py --nodes <node file> --edges <edge file> --k <number of communities> --eval <Y/N>
+Python 3.7.3 (default, January 01 2020, 09:00:00) 
+[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from pydcd import DCD, KM, MM
+>>> kmeans_detector = KM(10)
+>>> kmeans_detector.km_detect_community('fb_nodes.txt','fb_edges.txt','N') # N means no evaluation
 
-(2) Modularity Maximization: python modularity_maximization.py --nodes <node file> --edges <edge file> --eval <Y/N>
+>>> mm_detector = MM()
+>>> mm_detector.mm_detect_community('fb_nodes.txt','fb_edges.txt','Y') # Y means showing evaluation
 
-(3) DCD: python dcd.py --nodes <node file> --edges <edge file> --nodeattr <Y/N> --hidden1 <number of neurons in the first hidden layer> --hidden2 <number of neurons in the second hidden layer> --hidden3 <number of neurons in the third hidden layer> --nlabels <number of communities> --eval <Y/N>
+>>> dcd_detector = DCD() # using default setting for initialization, or
+>>> dcd_detector = DCD(128,64,128,50) # set the neurons for three hidden layers and the output dimension
+>>> dcd_detector.dcd_detect_community('fb_nodes.txt','fb_edges.txt','Y','N') # Y means nodes having attributes
+>>> dcd_detector.dcd_detect_community('fb_nodes.txt','fb_edges.txt','N','N') # The first N means nodes no attributes
+
 ```
 
 Input Examples
