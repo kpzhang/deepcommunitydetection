@@ -1,47 +1,12 @@
-A Deep Learning-Based Community Detection Software for Large-scale Networks
+DCD: A Deep Learning-Based Community Detection Software for Large-scale Networks
 =========================================================
 
-[![Install with conda](https://anaconda.org/milagraph/graphvite/badges/installer/conda.svg)][conda]
-[![License](https://anaconda.org/milagraph/graphvite/badges/license.svg)][license]
+DCD (Deep learning-based Community Detection) is designed to apply state-of-the-art deep learning technologies to identify communities for large-scale networks. Compared with existing community detection methods, DCD offers a unified solution for many variations of community detection problems.  
 
-[conda]: https://anaconda.org/milagraph/graphvite
-[license]: LICENSE
+DCD provides 4 implementation of community detection, 1 evaluation, and two types of networked data:
 
-[Docs] | [Tutorials] | [Benchmarks] | [Pre-trained models]
 
-[Docs]: https://graphvite.io/docs/latest/api/application
-[Tutorials]: https://graphvite.io/tutorials
-[Benchmarks]: https://graphvite.io/docs/latest/benchmark
-[Pre-trained Models]: https://graphvite.io/docs/latest/pretrained_model
-
-GraphVite is a general graph embedding engine, dedicated to high-speed and
-large-scale embedding learning in various applications.
-
-GraphVite provides complete training and evaluation pipelines for 3 applications:
-**node embedding**, **knowledge graph embedding** and
-**graph & high-dimensional data visualization**. Besides, it also includes 9 popular
-models, along with their benchmarks on a bunch of standard datasets.
-
-<table align="center" style="text-align:center">
-    <tr>
-        <th>Node Embedding</th>
-        <th>Knowledge Graph Embedding</th>
-        <th>Graph & High-dimensional Data Visualization</th>
-    </tr>
-    <tr>
-        <td><img src="asset/graph.png" height="240" /></td>
-        <td><img src="asset/knowledge_graph.png" height="240" /></td>
-        <td><img src="asset/visualization.png" height="240" /></td>
-    </tr>
-</table>
-
-Here is a summary of the training time of GraphVite along with the best open-source
-implementations on 3 applications. All the time is reported based on a server with
-24 CPU threads and 4 V100 GPUs.
-
-Training time of node embedding on [Youtube] dataset.
-
-| Model      | Existing Implementation       | GraphVite | Speedup |
+| Function      | Description       | Input | Output |
 |------------|-------------------------------|-----------|---------|
 | [DeepWalk] | [1.64 hrs (CPU parallel)][1]  | 1.19 mins | 82.9x   |
 | [LINE]     | [1.39 hrs (CPU parallel)][2]  | 1.17 mins | 71.4x   |
