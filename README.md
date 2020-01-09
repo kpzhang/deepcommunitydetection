@@ -21,13 +21,12 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 
 Performance comparison on four random networks. Note: numbers in parentheses are running time (seconds).
 
-| Network size    | Community size  | Baselines                       || Our method    |
+| Network size    | Community size  | K-Means | modularity maximization| Our method    |
 |-----------------|-----------------|----------------------------------|---------------|
-|                 |                 |K-Means | modularity maximization | GCN           |      
-| 100       | 10 | 13.5 mins / 54.3 s | 5.82x / 1.93x |
-| 1,000       | 100 | 28.1 mins / 55.8 s | 7.88x / 4.50x |
-| 10,000       | 100 | 28.1 mins / 55.8 s | 7.88x / 4.50x |
-| 20,000       | 100 | 28.1 mins / 55.8 s | 7.88x / 4.50x |
+| 100       | 10  | 0.561<br/>(0.07) | 0.922<br/>(0.01) |0.826<br/>(0.01)|
+| 1,000     | 100 | 0.699<br/>(1.04) | 0.807<br/>(1.11) |0.935<br/>(0.11)|
+| 10,000    | 100 | 0.726<br/>(199.90) | 0.633<br/>(338.82) |0.845<br/>(62.30)|
+| 20,000    | 100 | 0.709<br/>(807.56) | 0.702<br/>(1666.59) |0.814<br/>(444.12)|
 
 
 Training time of high-dimensional data visualization on [MNIST] dataset.
