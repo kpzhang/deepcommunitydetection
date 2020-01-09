@@ -10,8 +10,8 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 |------------|-------------------------------|-----------|---------|
 | KMeans     | Clustering baseline method (1) | Network node file <br/> Network edge file <br/> K | <node id, community id> |
 | MM      | Clustering baseline method (2) | Network node file <br/> Network edge file | <node id, community id> |
-| GCN     | DCD | Network node file <br/> Network edge file <br/> K | <node id, community id> |
-| GCN+    | Variant of GCN with node attributes | Network node file with attributes <br/> Network edge file <br/> K | <node id, community id> |
+| DCD     | DCD | Network node file <br/> Network edge file <br/> K | <node id, community id> |
+| DCD+    | Variant of GCN with node attributes | Network node file with attributes <br/> Network edge file <br/> K | <node id, community id> |
 | Evaluation | Evaluate the performance | Network node file <br/> Network edge file <br/> Community assignment | performance value|
 | Random network | Generate random network datasets | Network size <br/> Community size <br/> Probability of edges within communities <br/> Probability of edges between communities <br/> Directed network flag | <node id, community id> <br/> Network node file <br/> Network edge file |
 | Facebook network  | Import Facebook brand-brand network  | None| Facebook dataset |
@@ -21,7 +21,7 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 
 Performance comparison on four random networks. Note: numbers in parentheses are running time (seconds).
 
-| Network size    | Community size  | K-Means | Modularity <br/> Maximization| Our method    |
+| Network size    | Community size  | K-Means | Modularity <br/> Maximization| DCD   |
 |-----------------|-----------------|---------|------------------------|---------------|
 | 100       | 10  | 0.561<br/>(0.07) | 0.922<br/>(0.01) |0.826<br/>(0.01)|
 | 1,000     | 100 | 0.699<br/>(1.04) | 0.807<br/>(1.11) |0.935<br/>(0.11)|
