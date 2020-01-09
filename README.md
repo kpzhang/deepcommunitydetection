@@ -64,6 +64,12 @@ Installation
 conda install -c dcd
 ```
 
+### From PIP ###
+
+```bash
+pip3 install dcd
+```
+
 ### From Source ###
 
 Before installation, make sure you have `conda` installed.
@@ -83,37 +89,43 @@ Quick Start
 Here is a quick-start example.
 
 ```bash
-graphvite baseline quick start
+KMeans: python kmeans.py --nodes <node file> --edges <edge file> --k <number of communities> --eval <Y/N>
+Modularity Maximization: python modularity_maximization.py --nodes <node file> --edges <edge file> --eval <Y/N>
+DCD: python dcd.py --nodes <node file> --edges <edge file> --nodeattr <Y/N> --hidden1 <number of neurons in the first hidden layer> --hidden2 <number of neurons in the second hidden layer> --hidden3 <number of neurons in the third hidden layer> --nlabels <number of communities> --eval <Y/N>
 ```
 
-Typically, the example takes no more than 1 minute. You will obtain some output like
-
-```
-Batch id: 6000
-loss = 0.371041
-
-------------- link prediction --------------
-AUC: 0.899933
-
------------ node classification ------------
-macro-F1@20%: 0.242114
-micro-F1@20%: 0.391342
-```
-
-Baseline Benchmark
+Input Examples
 ------------------
 
-To reproduce a baseline benchmark, you only need to specify the keywords of the
-experiment. e.g. model and dataset.
+node file without attributes:
 
 ```bash
-graphvite baseline [keyword ...] [--no-eval] [--gpu n] [--cpu m] [--epoch e]
+node_id_1
+node_id_2
+node_id_3
+...
+node_id_n
 ```
 
-You may also set the number of GPUs and the number of CPUs per GPU.
+node file with attributes:
 
-Use ``graphvite list`` to get a list of available baselines.
+```bash
+node_id_1 <tab> value_for_attribute_1 value_for_attribute_2 ... value_for_attribute_m
+node_id_2 <tab> value_for_attribute_1 value_for_attribute_2 ... value_for_attribute_m
+node_id_3 <tab> value_for_attribute_1 value_for_attribute_2 ... value_for_attribute_m
+...
+node_id_n <tab> value_for_attribute_1 value_for_attribute_2 ... value_for_attribute_m
+```
 
+edge file:
+
+```bash
+node_id_1 node_id_2
+...
+node_id_i node_id_j
+...
+node_id_m node_id_k
+```
 
 Development Team
 ----------------
