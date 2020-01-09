@@ -52,9 +52,8 @@ Performance comparison on two real-world networks. Note: numbers in parentheses 
 Requirements
 ------------
 
-Generally, GraphVite works on any Linux distribution with CUDA >= 9.2.
+Generally, the library is compatible with Python 3.6/3.7.
 
-The library is compatible with Python 2.7 and 3.6/3.7.
 
 Installation
 ------------
@@ -62,14 +61,7 @@ Installation
 ### From Conda ###
 
 ```bash
-conda install -c milagraph graphvite cudatoolkit=$(nvcc -V | grep -Po "(?<=V)\d+.\d+")
-```
-
-If you only need embedding training without evaluation, you can use the following
-alternative with minimal dependencies.
-
-```bash
-conda install -c milagraph graphvite-mini cudatoolkit=$(nvcc -V | grep -Po "(?<=V)\d+.\d+")
+conda install -c dcd
 ```
 
 ### From Source ###
@@ -77,36 +69,18 @@ conda install -c milagraph graphvite-mini cudatoolkit=$(nvcc -V | grep -Po "(?<=
 Before installation, make sure you have `conda` installed.
 
 ```bash
-git clone https://github.com/DeepGraphLearning/graphvite
-cd graphvite
+git clone https://github.com/kpzhang/deepcommunitydetection
+cd deepcommunitydetection
 conda install -y --file conda/requirements.txt
 mkdir build
 cd build && cmake .. && make && cd -
 cd python && python setup.py install && cd -
 ```
 
-### On Colab ###
-
-```bash
-!wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-!chmod +x Miniconda3-latest-Linux-x86_64.sh
-!./Miniconda3-latest-Linux-x86_64.sh -b -p /usr/local -f
-
-!conda install -y -c milagraph -c conda-forge graphvite \
-    python=3.6 cudatoolkit=$(nvcc -V | grep -Po "(?<=V)\d+\.\d+")
-!conda install -y wurlitzer ipykernel
-```
-
-```python
-import site
-site.addsitedir("/usr/local/lib/python3.6/site-packages")
-%reload_ext wurlitzer
-```
-
 Quick Start
 -----------
 
-Here is a quick-start example of the node embedding application.
+Here is a quick-start example.
 
 ```bash
 graphvite baseline quick start
@@ -140,57 +114,15 @@ You may also set the number of GPUs and the number of CPUs per GPU.
 
 Use ``graphvite list`` to get a list of available baselines.
 
-Custom Experiment
------------------
-
-Create a yaml configuration scaffold for graph, knowledge graph, visualization or
-word graph.
-
-```bash
-graphvite new [application ...] [--file f]
-```
-
-Fill some necessary entries in the configuration following the instructions. You
-can run the configuration by
-
-```bash
-graphvite run [config] [--no-eval] [--gpu n] [--cpu m] [--epoch e]
-```
-
-High-dimensional Data Visualization
------------------------------------
-
-You can visualize your high-dimensional vectors with a simple command line in
-GraphVite.
-
-```bash
-graphvite visualize [file] [--label label_file] [--save save_file] [--perplexity n] [--3d]
-```
-
-The file can be either a numpy dump `*.npy` or a text matrix `*.txt`. For the save
-file, we recommend to use `png` format, while `pdf` is also supported.
-
-Contributing
-------------
-
-We welcome all contributions from bug fixs to new features. Please let us know if you
-have any suggestion to our library.
 
 Development Team
 ----------------
 
-GraphVite is developed by Prof. Kunpeng Zhang, Prof. Shaokun Fan, and Prof. Bruce Golden.
+GraphVite is developed by Prof.[Kunpeng Zhang], Prof. [Shaokun Fan], and Prof. [Bruce Golden].
 
-Authors of this project are [Zhaocheng Zhu], [Shizhen Xu], [Meng Qu] and [Jian Tang].
-Contributors include [Kunpeng Wang] and [Zhijian Duan].
-
-[MilaGraph]: https://github.com/DeepGraphLearning
-[Zhaocheng Zhu]: https://kiddozhu.github.io
-[Shizhen Xu]: https://github.com/xsz
-[Meng Qu]: https://mnqu.github.io
-[Jian Tang]: https://jian-tang.com
-[Kunpeng Wang]: https://github.com/Kwinpeng
-[Zhijian Duan]: https://github.com/zjduan
+[Kunpeng Zhang]: http://www.terpconnect.umd.edu/~kpzhang/
+[Shaokun Fan]: https://business.oregonstate.edu/users/shaokun-fan
+[Bruce Golden]: http://scholar.rhsmith.umd.edu/bgolden/home
 
 Citation
 --------
