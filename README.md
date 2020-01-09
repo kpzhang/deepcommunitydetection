@@ -19,12 +19,12 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 
 [Citation]: https://snap.stanford.edu/data/cit-HepTh.html
 
-Training / evaluation time of knowledge graph embedding on [FB15k] dataset.
+Performance comparison on four random networks. Note: numbers in parentheses are running time (seconds).
 
-| Model           | Existing Implementation           | GraphVite          | Speedup       |
+| Network size           | Community size          | Baselines          | Our method       |
 |-----------------|-----------------------------------|--------------------|---------------|
-| [TransE]        | [1.31 hrs / 1.75 mins (1 GPU)][3] | 13.5 mins / 54.3 s | 5.82x / 1.93x |
-| [RotatE]        | [3.69 hrs / 4.19 mins (1 GPU)][4] | 28.1 mins / 55.8 s | 7.88x / 4.50x |
+| 100       | [1.31 hrs / 1.75 mins (1 GPU)][3] | 13.5 mins / 54.3 s | 5.82x / 1.93x |
+| 1,000       | [3.69 hrs / 4.19 mins (1 GPU)][4] | 28.1 mins / 55.8 s | 7.88x / 4.50x |
 
 [FB15k]: http://papers.nips.cc/paper/5071-translating-embeddings-for-modeling-multi-relational-data.pdf
 [TransE]: http://papers.nips.cc/paper/5071-translating-embeddings-for-modeling-multi-relational-data.pdf
