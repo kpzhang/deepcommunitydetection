@@ -149,7 +149,7 @@ node_id_m node_id_k
 Development Team
 ----------------
 
-PyDCD is developed by Prof.[Kunpeng Zhang], Prof. [Shaokun Fan], and Prof. [Bruce Golden].
+PyDCD is developed by Prof. [Kunpeng Zhang], Prof. [Shaokun Fan], and Prof. [Bruce Golden].
 
 [Kunpeng Zhang]: http://www.terpconnect.umd.edu/~kpzhang/
 [Shaokun Fan]: https://business.oregonstate.edu/users/shaokun-fan
