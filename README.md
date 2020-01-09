@@ -107,6 +107,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> dcd_detector.dcd_detect_community('fb_nodes.txt','fb_edges.txt','Y','N') # Y means nodes having attributes
 >>> dcd_detector.dcd_detect_community('fb_nodes.txt','fb_edges.txt','N','N') # The first N means nodes no attributes
 
+>>> rn = RandNet() # to generate random networks
+>>> rn.generate_random_networks(1000,100,0.2,0.05) # undirected network with 1000 nodes and 100 communities
+>>> rn.generate_random_networks(1000,100,0.2,0.05,directed=True) # directed network with 1000 nodes and 100 communities
+
 ```
 
 Input Examples
