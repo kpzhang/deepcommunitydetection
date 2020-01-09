@@ -1,5 +1,5 @@
 
-DCD: A Deep Learning-Based Community Detection Software for Large-scale Networks
+PyDCD: A Deep Learning-Based Community Detection Software in Python for Large-scale Networks
 =========================================================
 
 DCD (Deep learning-based Community Detection) is designed to apply state-of-the-art deep learning technologies to identify communities for large-scale networks. Compared with existing community detection methods, DCD offers a unified solution for many variations of community detection problems.  
