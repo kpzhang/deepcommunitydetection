@@ -1,7 +1,10 @@
+
 DCD: A Deep Learning-Based Community Detection Software for Large-scale Networks
 =========================================================
 
 DCD (Deep learning-based Community Detection) is designed to apply state-of-the-art deep learning technologies to identify communities for large-scale networks. Compared with existing community detection methods, DCD offers a unified solution for many variations of community detection problems.  
+
+![DCD logo](pics/framework.png)
 
 DCD provides 4 implementation of community detection, 1 evaluation, and two types of networked data:
 
