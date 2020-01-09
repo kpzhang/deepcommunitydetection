@@ -22,7 +22,7 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 Performance comparison on four random networks. Note: numbers in parentheses are running time (seconds).
 
 | Network size    | Community size  | K-Means | modularity maximization| Our method    |
-|-----------------|-----------------|----------------------------------|---------------|
+|-----------------|-----------------|---------|------------------------|---------------|
 | 100       | 10  | 0.561<br/>(0.07) | 0.922<br/>(0.01) |0.826<br/>(0.01)|
 | 1,000     | 100 | 0.699<br/>(1.04) | 0.807<br/>(1.11) |0.935<br/>(0.11)|
 | 10,000    | 100 | 0.726<br/>(199.90) | 0.633<br/>(338.82) |0.845<br/>(62.30)|
