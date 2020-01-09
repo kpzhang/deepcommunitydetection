@@ -11,32 +11,24 @@ DCD provides 4 implementation of community detection, 1 evaluation, and two type
 | KMeans     | Clustering baseline method (1) | Network node file |                         |
 |            |                                | Network edge file | <node id, community id> |
 |            |                                | K                 |                         |
-|------------|-------------------------------|-----------|---------|
 | MM     | Clustering baseline method (2) | Network node file |                         |
 |            |                                | Network edge file | <node id, community id> |
-|------------|-------------------------------|-----------|---------|
 | GCN     | DCD | Network node file |                         |
 |            |                                | Network edge file | <node id, community id> |
 |            |                                | K                 |                         |
-|------------|-------------------------------|-----------|---------|
 | GCN+     | Variant of GCN with node attributes | Network node file with attributes |                         |
 |            |                                | Network edge file | <node id, community id> |
 |            |                                | K                 |                         |
-|------------|-------------------------------|-----------|---------|
 | Evaluation     | Evaluate the performance | Network node file |                         |
 |            |                                | Network edge file | performance value|
 |            |                                | Community assignment                 |                         |
-|------------|-------------------------------|-----------|---------|
 | Random network     | Generate random network datasets | Network size |                         |
 |            |                                | Community size | <node id, community id> |
 |            |                                | Probability of edges within communities                | Network node file |
 |            |                                | Probability of edges between communities                |Network edge file |
 |            |                                | Directed network flag               |                     |
-|------------|-------------------------------|-----------|---------|
 | Facebook network  | Import Facebook brand-brand network  | None| Facebook dataset |
-|------------|-------------------------------|-----------|---------|
 | Citation network  | Import citation network  | None| [Citation] dataset |
-|------------|-------------------------------|-----------|---------|
 
 [Citation]: https://snap.stanford.edu/data/cit-HepTh.html
 
