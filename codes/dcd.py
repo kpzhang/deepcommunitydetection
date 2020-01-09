@@ -53,7 +53,7 @@ node attributes : str
 peval : str
 	whether to show the evaluation result, default (N)
 """
-class DCD(nn.Module):
+class DCD():
 
 	def __init__(self, nhidden1=128, nhidden2=64, nhidden3=128, nlabels=100):
 
