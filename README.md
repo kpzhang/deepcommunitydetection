@@ -70,7 +70,7 @@ conda install -c pydcd
 ### From PIP ###
 
 ```bash
-pip3 install pydcd
+pip3 install PyDCD
 ```
 
 ### From Source ###
@@ -149,7 +149,7 @@ node_id_m node_id_k
 Development Team
 ----------------
 
-DCD is developed by Prof.[Kunpeng Zhang], Prof. [Shaokun Fan], and Prof. [Bruce Golden].
+PyDCD is developed by Prof.[Kunpeng Zhang], Prof. [Shaokun Fan], and Prof. [Bruce Golden].
 
 [Kunpeng Zhang]: http://www.terpconnect.umd.edu/~kpzhang/
 [Shaokun Fan]: https://business.oregonstate.edu/users/shaokun-fan
