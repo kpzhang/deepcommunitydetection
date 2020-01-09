@@ -69,7 +69,7 @@ class DCD(nn.Module):
 		self.nlabels = nlabels
 
 
-	def detect_community(self, node_fname, edge_fname, node_attr, peval='N'):
+	def dcd_detect_community(self, node_fname, edge_fname, node_attr, peval='N'):
 
 		start = time.time()
 

@@ -41,7 +41,7 @@ class MM():
 		super(KM, self).__init__()
 
 
-	def detect_community(self, node_fname, edge_fname, peval='N'):
+	def mm_detect_community(self, node_fname, edge_fname, peval='N'):
 		""" detect communities using KMeans, input: node file, edge file, [if showing evaluation results]"""
 
 		start = time.time()
