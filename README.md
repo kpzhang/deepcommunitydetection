@@ -6,7 +6,7 @@ DCD (Deep learning-based Community Detection) is designed to apply state-of-the-
 
 ![DCD logo](pics/framework.png)
 
-DCD provides 4 implementation of community detection, 1 evaluation, and two types of networked data:
+DCD provides implementation of 4 community detection algorithms, 1 evaluation, and two types of networked data:
 
 
 | Function      | Description       | Input | Output |
