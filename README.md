@@ -95,6 +95,7 @@ Here is a quick-start example.
 Python 3.7.3 (default, January 01 2020, 09:00:00) 
 [Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
 Type "help", "copyright", "credits" or "license" for more information.
+
 >>> from pydcd import DCD, KM, MM
 >>> kmeans_detector = KM(10)
 >>> kmeans_detector.km_detect_community('fb_nodes.txt','fb_edges.txt','N') # N means no evaluation
