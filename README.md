@@ -86,8 +86,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 >>> dcd_detector = DCD() # using default setting for initialization, or
 >>> dcd_detector = DCD(128,64,128,50) # set the neurons for three hidden layers and the output dimension
->>> dcd_detector.dcd_detect_community('fb_nodes.txt','fb_edges.txt','Y','N') # Y means nodes having attributes
->>> dcd_detector.dcd_detect_community('fb_nodes.txt','fb_edges.txt','N','N') # The first N means nodes no attributes
+>>> dcd_detector.dcd_detect_community('fb_nodes_withattributes.txt','fb_edges.txt','Y','N') # Y means nodes having attributes
+>>> dcd_detector.dcd_detect_community('fb_nodes_noattributes.txt','fb_edges.txt','N','N') # The first N means nodes no attributes
 
 >>> rn = RandNet() # to generate random networks
 >>> rn.generate_random_networks(1000,100,0.2,0.05) # undirected network with 1000 nodes and 100 communities
