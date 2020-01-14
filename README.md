@@ -61,21 +61,11 @@ Generally, the library is compatible with Python 3.6/3.7.
 Installation
 ------------
 
-### From Conda ###
-
-```bash
-conda install -c pydcd
-```
-
 ### From PIP ###
 
 ```bash
 pip3 install pydcd
 ```
-
-### From Source ###
-
-Before installation, make sure you have `conda` installed.
 
 ```bash
 git clone https://github.com/kpzhang/deepcommunitydetection
