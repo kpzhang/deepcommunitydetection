@@ -69,7 +69,7 @@ class KM():
 		# 3. KMeans Clustering Algorithm
 		kmeans = KMeans(n_clusters=self.k, random_state=0).fit(matrix)
 		labels = kmeans.labels_.tolist()
-		partition = [set() for k in range(args.k)]
+		partition = [set() for k in range(self.k)]
 		for i in range(len(labels)):
 		    print(node_ids[i],",",labels[i])
     		partition[labels[i]].add(i)
