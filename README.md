@@ -70,7 +70,7 @@ conda install -c pydcd
 ### From PIP ###
 
 ```bash
-pip3 install PyDCD
+pip3 install pydcd
 ```
 
 ### From Source ###
