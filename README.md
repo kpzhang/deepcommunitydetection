@@ -67,15 +67,6 @@ Installation
 pip3 install pydcd
 ```
 
-```bash
-git clone https://github.com/kpzhang/deepcommunitydetection
-cd deepcommunitydetection
-conda install -y --file conda/requirements.txt
-mkdir build
-cd build && cmake .. && make && cd -
-cd python && python setup.py install && cd -
-```
-
 Quick Start
 -----------
 
