@@ -14,7 +14,7 @@ DCD provides implementation of 4 community detection algorithms, 1 evaluation, a
 | KMeans     | Clustering baseline method (1) | Network node file <br/> Network edge file <br/> K | <node id, community id> |
 | MM      | Clustering baseline method (2) | Network node file <br/> Network edge file | <node id, community id> |
 | DCD     | DCD | Network node file <br/> Network edge file <br/> K | <node id, community id> |
-| DCD+    | Variant of GCN with node attributes | Network node file with attributes <br/> Network edge file <br/> K | <node id, community id> |
+| DCD+    | Variant of GCN with node attributes | Network node file with <br />attributes <br/> Network edge file <br/> K | <node id, community id> |
 | Evaluation | Evaluate the performance | Network node file <br/> Network edge file <br/> Community assignment | performance value|
 | Random network | Generate random network datasets | Network size <br/> Community size <br/> Probability of edges within communities <br/> Probability of edges between communities <br/> Directed network flag | <node id, community id> <br/> Network node file <br/> Network edge file |
 | Facebook network  | Import Facebook brand-brand network  | None| Facebook dataset |
