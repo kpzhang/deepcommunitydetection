@@ -52,7 +52,7 @@ Performance comparison on two real-world networks. Note: numbers in parentheses 
 Requirements
 ------------
 
-Generally, the library is compatible with Python 3.6/3.7.
+Generally, the library is compatible with Python 3.6/3.7.<br/>
 NetworkX >= 2.3
 
 
