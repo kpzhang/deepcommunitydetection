@@ -54,9 +54,12 @@ class GCN(nn.Module):
 
 
 	def reset_parameter(self):
+		
+		np.random.seed(self.seed)
+        	if self.seed is not None:
+            		torch.manual_seed(self.seed)
 
-		np.random.seed(2020)
-
+		'''
 		stdv1 = 1./math.sqrt(self.weight1.size(1))
 		self.weight1.data.uniform_(-stdv1, stdv1)
 
@@ -68,13 +71,19 @@ class GCN(nn.Module):
 
 		stdv4 = 1./math.sqrt(self.weight4.size(1))
 		self.weight4.data.uniform_(-stdv4, stdv4)
+		'''
+		
+		torch.nn.init.xavier_uniform(self.weight1,gain=nn.init.calculate_gain('tanh'))
+        	torch.nn.init.xavier_uniform(self.weight2,gain=nn.init.calculate_gain('tanh'))
+        	torch.nn.init.xavier_uniform(self.weight3,gain=nn.init.calculate_gain('tanh'))
+		torch.nn.init.xavier_uniform(self.weight4,gain=nn.init.calculate_gain('tanh'))
 
 
 	def forward(self, A, X):
 		
-		output_layer1 = F.relu(A.mm(X).mm(self.weight1))
-		output_layer2 = F.relu(A.mm(output_layer1).mm(self.weight2))
-		output_layer3 = F.relu(A.mm(output_layer2).mm(self.weight3))
+		output_layer1 = F.tanh(A.mm(X).mm(self.weight1))
+		output_layer2 = F.tanh(A.mm(output_layer1).mm(self.weight2))
+		output_layer3 = F.tanh(A.mm(output_layer2).mm(self.weight3))
 		output = F.log_softmax(A.mm(output_layer3).mm(self.weight4), dim=1)
 
 		return output
