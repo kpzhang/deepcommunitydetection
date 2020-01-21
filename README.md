@@ -53,6 +53,7 @@ Requirements
 ------------
 
 Generally, the library is compatible with Python 3.6/3.7.
+NetworkX >= 2.3
 
 
 Installation
